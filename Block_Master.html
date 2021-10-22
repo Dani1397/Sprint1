@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Styles/bm-styles.css">
+    <title>Block Master</title>
+</head>
+
+<body>
+
+    <header>
+        <nav id="navbar">
+            <ul id="row">
+                <li class="nav-list"><a href="#"></a>Todas</li>
+                <li class="nav-list"><a href="#"></a>Más valoradas</li>
+                <li class="nav-list"><a href="#"></a>Menos valoradas</li>
+            </ul>
+           <div class="searchingBar" >
+            <input class="searching" id="inputBuscar" placeholder="Busca tu película favorita">
+            <button class="btnSearching" id="btnBuscar">Buscar</button>
+           </div>
+        </nav>
+    </header>
+
+    <section id="all-movies">
+        <h1>Todas las películas</h1>
+    </section>
+
+    <div class="row" id="items-card"></div>
+
+    <template id="template-card">
+        <div class="card">
+            <img class="image" src="" alt=""></img>
+            <h5 class="status"></h5>
+        </div>
+    </template>
+
+
+    <script src="./Scripts/bm.js"></script>
+</body>
+
+</html>
