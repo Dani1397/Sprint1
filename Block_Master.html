@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./Styles/bm-styles.css">
+    <link rel="shortcut icon" href="/images/logo-blockBuster.png">
     <title>Block Master</title>
 </head>
 
@@ -13,15 +16,20 @@
 
     <header>
         <nav id="navbar">
+            <div id="logo"> <img src="./images/logo-blockBuster.png" alt="logo-blockBuster"><a href="/Block_Master.html"></a></div>
             <ul id="row">
                 <li class="nav-list"><a href="#"></a>Todas</li>
                 <li class="nav-list"><a href="#"></a>Más valoradas</li>
                 <li class="nav-list"><a href="#"></a>Menos valoradas</li>
             </ul>
-           <div class="searchingBar" >
-            <input class="searching" id="inputBuscar" placeholder="Busca tu película favorita">
-            <button class="btnSearching" id="btnBuscar">Buscar</button>
-           </div>
+            <div class="searchingBar">
+                <input class="searching" id="inputBuscar" placeholder="Busca tu película favorita">
+                <button class="btnSearching" id="btnBuscar">Buscar</button>
+            </div>
+            <div>
+                <i id="user" class="far fa-user"><a href="/Register.html"></a></i>
+            </div>
+
         </nav>
     </header>
 
@@ -37,7 +45,6 @@
             <h5 class="status"></h5>
         </div>
     </template>
-
 
     <script src="./Scripts/bm.js"></script>
 </body>

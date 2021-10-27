@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./Styles/Register.css">
+    <link rel="shortcut icon" href="/images/logo-blockBuster.png">
+    <title>Register</title>
+</head>
+
+<body>
+
+    <header>
+        <nav id="navbar">
+            <div class="logo"> <img src="./images/logo-blockBuster.png" alt="logo-blockBuster"><a
+                    href="/Block_Master.html"></a></div>
+            <ul id="row">
+                <li class="nav-list"><a href="#"></a>Todas</li>
+                <li class="nav-list"><a href="#"></a>Más valoradas</li>
+                <li class="nav-list"><a href="#"></a>Menos valoradas</li>
+            </ul>
+            <div class="searchingBar">
+                <input class="searching" id="inputBuscar" placeholder="Busca tu película favorita">
+                <button class="btnSearching" id="btnBuscar">Buscar</button>
+            </div>
+            <div>
+                <i id="user" class="far fa-user"><a href="/Register.html"></a></i>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <div class="div-usuario">
+            <h1 class="Headline1">Registro de Usurario</h1>
+        </div>
+        <form id="formulario">
+            <div class="campo">
+                <label for="name">Nombre</label>
+                <input id="name" name="name" type="text">
+            </div>
+            <div class="campo">
+                <label for="lastName">Apellido</label>
+                <input id="lastName" name="lastName" type="text">
+            </div>
+            <div class="campo">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text">
+            </div>
+            <div class="campo">
+                <label id="label-edit" for="id">Id</label>
+                <input id="id" name="id" type="text" readonly>
+            </div>
+            <div class="">
+                <button id="btnGuardar" type="submit">Guardar</button>
+            </div>
+            <div class="">
+                <button id="btnCorreo" type="button">Buscar por correo</button>
+            </div>
+            <div class="">
+                <button id="btnEditar" type="button">Editar</button>
+            </div>
+            <div class="">
+                <button id="btnEliminar" type="button">Eliminar</button>
+            </div>
+        </form>
+        </div>
+    </main>
+
+
+    <script src=""></script>
+</body>
+
+</html>

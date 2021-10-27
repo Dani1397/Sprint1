@@ -48,7 +48,7 @@ boton.addEventListener('click', async () => {
 
 const API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1%27';
 const IMG_PATH = 'https://image.tmdb.org/t/p/w1280'
-const SEARCH_URL = 'http://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query="'
+const SEARCH_URL = 'http://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query='
 
 const templateCard = document.getElementById("template-card").content;
 const itemsCards = document.getElementById("items-card");
@@ -56,8 +56,7 @@ const fragment = document.createDocumentFragment();
 
 async function getMovies(url) {
     try {
-        const res = await fetch(url);
-        const data = await res.json();
+        const data = await fetch(url).then(r=>r.json());
         showMovies(data.results);
     } catch (error) {
         console.log("Error en la ejecución", error);
@@ -77,6 +76,23 @@ function showMovies(movies) {
 
     itemsCards.appendChild(fragment);
 }
+
+const btnsearching = document.getElementById('btnBuscar');
+const inputsearch = document.getElementById('inputBuscar');
+
+btnsearching.addEventListener('click', async() => {
+    const text = inputsearch.value;
+    if (text.length <= 1){
+        return alert('Ingrese al menos dos caracteres');
+    }
+    try {
+        const data = await fetch(SEARCH_URL+text).then(r=>r.json());
+        showMovies(data.results);
+    } catch (error) {
+        console.log("Error en la ejecución", error);
+    }
+
+})
 
 
 
