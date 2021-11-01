@@ -16,22 +16,30 @@
 
     <header>
         <nav id="navbar">
-            <div id="logo"> <img src="./images/logo-blockBuster.png" alt="logo-blockBuster"><a href="/Block_Master.html"></a></div>
+            <div class="logo"><a href="./Block_Master.html"><img src="./images/logo-blockBuster.png" alt="logo-blockBuster"></a></div>
             <ul id="row">
-                <li class="nav-list"><a href="#"></a>Todas</li>
-                <li class="nav-list"><a href="#"></a>Más valoradas</li>
-                <li class="nav-list"><a href="#"></a>Menos valoradas</li>
-            </ul>
+                <li class="nav-list"><a href="./Block_Master.html">Todas</a></li>
+                <li class="nav-list"><a href="#">Más valoradas</a></li>
+                <li class="nav-list"><a href="#">Menos valoradas</a></li>
+                <li class="nav-list"><a href="./Upload_Movie.html">Agrega tu película</a></li>
+            </ul> 
             <div class="searchingBar">
                 <input class="searching" id="inputBuscar" placeholder="Busca tu película favorita">
                 <button class="btnSearching" id="btnBuscar">Buscar</button>
             </div>
             <div>
-                <i id="user" class="far fa-user"><a href="/Register.html"></a></i>
+                <a href="./Register.html"><i id="user" class="far fa-user"></i></a>
             </div>
-
         </nav>
     </header>
+
+    <div class="container">
+        <section class="slider">
+        <img class="slider-image" src="./images/mulan.png" alt="poster" />
+        <img class="slider-image" src="./images/raya.png" alt="poster" />
+        <img class="slider-image" src="./images/unidos.png" alt="poster" />
+        </section>
+    </div>
 
     <section id="all-movies">
         <h1>Todas las películas</h1>
@@ -42,7 +50,16 @@
     <template id="template-card">
         <div class="card">
             <img class="image" src="" alt=""></img>
-            <h5 class="status"></h5>
+            <i id="star" class="far fa-star"></i><h5 id="vote" class="status"></h5>
+        </div>
+    </template>
+
+    <template id="template-card-2">
+        <div class="card-description">
+            <img id="image" src="" alt=""></img>
+            <h3 id="title" class="movie-title"></h3>
+            <p id="resume" class="movie-resume"></p>
+            <input id="btn-watch-trailer" type="button" value="Ver Trailer">
         </div>
     </template>
 

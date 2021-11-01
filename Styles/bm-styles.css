@@ -23,7 +23,7 @@ body{
     position: absolute;
     justify-content: center;
     top: 20px;
-    left: 0;
+    left: 0px;
     width: 100%;
     z-index: 10;
 }
@@ -34,12 +34,15 @@ body{
     cursor: pointer;
 }
 
-#logo {
+#user{
+    display: flex;
+    padding: 20px 10px 0px 20px;
     cursor: pointer;
+    color: var(--main-white-color);
 }
 
 #row {
-    width: 40%;
+    width: 45%;
     display: flex;
     justify-content: space-around; 
 }
@@ -50,8 +53,8 @@ body{
 
 .nav-list a {
     text-decoration: none;
-    font-size: 1.5rem;
-    padding: 1rem;
+    font-size: 1em;
+    padding: 0.5em;
     color: var(--main-white);
 }
 
@@ -64,7 +67,7 @@ body{
     align-items: center;
     padding: 11px 12px;
     position: static;
-    width: 400px;
+    width: 300px;
     height: 44px;
     left: 0px;
     top: 0px;
@@ -72,6 +75,7 @@ body{
     border: 1px solid #FED941;
     box-sizing: border-box;
     border-radius: 8px 0px 0px 8px;
+    margin-left: 20px;
 }
 
 .btnSearching {
@@ -99,10 +103,24 @@ body{
     cursor: pointer;
 }
 
+.slider{
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    width: 85%;
+    margin: auto;
+}
+.slider img {
+    width: 100%;
+    scroll-snap-align: center;
+    margin: 100px 0px 0px 0px;
+
+}
+
 #all-movies h1 {
-    margin-top: 100px;
+    margin-top: 2em;
     margin-left: 100px;
-    margin-bottom: 60px;
+    margin-bottom: 4em;
 }
 
 .image{
@@ -121,6 +139,45 @@ body{
     margin-left: 50px;
 }
 
-h5{
+h5 {
+    content: '';
+    position: relative;
+    display: flex;
+    width: 92px;
+    height: 36px;
+    top: -259px;
+    right: 0px;
+    bottom: 0px;
+    left: 25px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 50px 50px 0px;
+    background-color: #000000a3;
+    border-bottom: 3px solid #FED941;
+    border-top: 3px solid #FED941;
+    border-right: 3px solid #FED941;
+    backdrop-filter: blur(3.5px);
+}
+
+.card .vote-average-container .vote-average {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 34px;
     text-align: center;
+    letter-spacing: 0.01em;
+}
+
+.card .vote-average-container i {
+    color: #FED941;
+    margin-right: 10px;
+}
+
+#star {
+        position: relative;
+        bottom: 207px;
+        left: 34px;
+        z-index: 3;
+        color: var(--main-yellow-color);
 }

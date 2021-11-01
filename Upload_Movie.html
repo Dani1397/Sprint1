@@ -9,7 +9,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./Styles/Register.css">
     <link rel="shortcut icon" href="/images/logo-blockBuster.png">
-    <title>Register</title>
+    <title>Agregar película</title>
 </head>
 
 <body>
@@ -25,36 +25,46 @@
 
     <header>
         <div>
-            <h1 id="Headline1">Registro de Usurario</h1>
+            <h1 id="Headline1">Sube tu película!</h1>
         </div>
     </header>
     <main>
         <form id="form">
             <div class="campo">
-                <input id="name" name="name" type="text" placeholder="Nombre">
+                <input id="poster" name="poster" type="text" placeholder="URL poster de la peícula">
             </div>
             <div class="campo">
-                <input id="lastName" name="lastName" type="text" placeholder="Apellidos">
+                <input id="title" name="title" type="text" placeholder="Título">
             </div>
             <div class="campo">
-                <input id="email" name="email" type="text" placeholder="Email">
+                <input id="desription" name="desription" type="text" placeholder="Descripción">
             </div>
             <div >
-                <button class="submit" id="btnGuardar" type="submit">Guardar</button>
+                <button class="submit" id="btnGuardar" type="submit">Subir película</button>
             </div>
             <div >
-                <button class="submit" id="btnCorreo" type="button">Buscar por correo</button>
+                <button class="submit" id="btn-buscar-titulo" type="button">Buscar por título</button>
             </div>
             <div >
-                <button class="submit" id="btnEditar" type="button">Editar</button>
+                <button class="submit" id="btnEditar" type="button">Editar información</button>
             </div>
             <div >
                 <button class="submit" id="btnEliminar" type="button">Eliminar</button>
             </div>
         </form>
         </div>
+
+        <div class="row" id="items-card"></div>
+
+    <template id="template-card">
+        <div class="card">
+            <img class="image" src="" alt=""></img>
+            <h5 id="vote" class="status"></h5>
+        </div>
+    </template>
+    
     </main>
-    <script src="./Scripts/user.js"></script>
+    <script src="./Scripts/movies.js"></script>
 </body>
 
 </html>

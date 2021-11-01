@@ -1,0 +1,34 @@
+{
+  "usuarios": [
+    {
+      "name": "David",
+      "lastName": "Sanchez",
+      "email": "david@hotmail.com",
+      "id": 1
+    },
+    {
+      "name": "Isabela",
+      "lastName": "Paloma",
+      "email": "paloma@hotmail.com",
+      "id": 2
+    },
+    {
+      "name": "Juana",
+      "lastName": "Perez",
+      "email": "juanibae@hotmail.com",
+      "id": 3
+    },
+    {
+      "name": "Daniela",
+      "lastName": "Rivera",
+      "email": "danswag@hotmail.com",
+      "id": 4
+    },
+    {
+      "name": "Valentina",
+      "lastName": "Garzon",
+      "email": "valenmua@hotmail.com",
+      "id": 5
+    }
+  ]
+}
