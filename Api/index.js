@@ -21,4 +21,4 @@ app.delete('/movies/:id', (req, res)=>{
     movies.splice(index,1)
     res.json(movies);
 })
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
