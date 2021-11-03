@@ -1,7 +1,7 @@
 let formulario = document.getElementById('form');
 let btnTitulo = document.getElementById('btn-buscar-titulo');
 let btnEditar = document.getElementById('btnEditar');
-let url = 'http://localhost:3000/movies/'
+let url = 'https://dani3312.herokuapp.com/movies/'
 let id ;
 
 formulario.addEventListener('submit', async (e) => {
@@ -84,7 +84,7 @@ const fragment = document.createDocumentFragment();
 const itemsCards = document.getElementById("items-card");
 
 async function getMovies(){
-    let resp = await fetch(`http://localhost:3000/movies`).then(r=>r.json());
+    let resp = await fetch(`https://dani3312.herokuapp.com/movies/`).then(r=>r.json());
     showMovies(resp)
 }
 

@@ -8,6 +8,10 @@ const fragment = document.createDocumentFragment();
 const slides = document.querySelector('.slider');
 const templateDetail = document.getElementById('template-card-2').content;
 
+async function getVideos(id) {
+
+    return fetch(`http://api.themoviedb.org/3/movie/${id}/videos?api_key=3fd2be6f0c70a2a598f084ddfb75487c`).then(r => r.json());
+}
 
 async function getMovies(url) {
     try {
@@ -28,18 +32,26 @@ function showMovies(movies) {
 
         const clone = templateCard.cloneNode(true);
 
-        const btnWatchTrailer = document.getElementById('btn-watch-trailer');
 
         clone.firstElementChild.addEventListener('click', () => {
             slides.innerHTML = ''
             templateDetail.querySelector("#image").setAttribute("src", IMG_PATH + movie.poster_path);
             templateDetail.querySelector('.movie-title').textContent = movie.title;
             templateDetail.querySelector('.movie-resume').innerHTML = movie.overview;
-            templateDetail.querySelector('#btn-watch-trailer').innerHTML = btnWatchTrailer;
 
             window.scrollTo(0, 0);
 
             const clone = templateDetail.cloneNode(true);
+            clone.firstElementChild.addEventListener('click', async () => {
+                console.log('btnWatchTrailer')
+                const videos = await getVideos(movie.id);
+                const video = videos.results[0].key;
+                console.log(video);
+                slides.innerHTML = `<iframe width="250" height="250" src="https://www.youtube.com/embed/${video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+
+            })
+
+
             slides.appendChild(clone);
         });
         fragment.appendChild(clone);
@@ -61,10 +73,8 @@ btnsearching.addEventListener('click', async () => {
         templateCard.innerHTML = ''
         itemsCards.innerHTML = ''
         const search = data.results;
-        const searchResult = search.filter(movie => movie.original_title.toLowerCase() == text.toLowerCase());
-        showMovies(searchResult);
-        console.log(search)
-        console.log(searchResult)
+        //const searchResult = search.filter(movie => movie.original_title.toLowerCase() == text.toLowerCase());
+        showMovies(search);
         window.scrollTo(0, 0);
     } catch (error) {
         console.log("Error en la ejecución", error);
@@ -72,6 +82,7 @@ btnsearching.addEventListener('click', async () => {
     }
 
 })
+
 
 
 
